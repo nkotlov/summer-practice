@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">Автогонки</string>
+    <string name="hint_number_of_cars">Количество автомобилей</string>
+    <string name="button_start_race">Начать гонку</string>
+    <string name="text_race_results">Результаты гонки появятся здесь</string>
+    <string name="invalid_number_of_cars">Пожалуйста, введите корректное количество автомобилей</string>
+</resources>
