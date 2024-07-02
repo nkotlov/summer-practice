@@ -1,4 +1,3 @@
-<?xml version="1.0" encoding="utf-8"?>
 <navigation xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
@@ -15,9 +14,30 @@
         tools:layout="@layout/fragment_search" />
 
     <fragment
-        android:id="@+id/notificationsFragment"
-        android:name="com.example.homework.NotificationsFragment"
-        tools:layout="@layout/fragment_notifications" />
+        android:id="@+id/inputFragment"
+        android:name="com.example.homework.InputFragment"
+        tools:layout="@layout/fragment_input">
+        <action
+            android:id="@+id/action_inputFragment_to_displayFragment"
+            app:destination="@id/displayFragment">
+            <argument
+                android:name="inputText"
+                app:argType="string" />
+        </action>
+    </fragment>
+
+    <fragment
+        android:id="@+id/settingsFragment"
+        android:name="com.example.homework.SettingsFragment"
+        tools:layout="@layout/fragment_settings">
+        <action
+            android:id="@+id/action_settingsFragment_to_displayFragment"
+            app:destination="@id/displayFragment">
+            <argument
+                android:name="inputText"
+                app:argType="string" />
+        </action>
+    </fragment>
 
     <fragment
         android:id="@+id/profileFragment"
@@ -25,25 +45,7 @@
         tools:layout="@layout/fragment_profile" />
 
     <fragment
-        android:id="@+id/settingsFragment"
-        android:name="com.example.homework.SettingsFragment"
-        tools:layout="@layout/fragment_settings" />
-
-    <fragment
-        android:id="@+id/inputFragment"
-        android:name="com.example.yourapp.InputFragment"
-        tools:layout="@layout/fragment_input">
-        <action
-            android:id="@+id/action_inputFragment_to_displayFragment"
-            app:destination="@id/displayFragment" />
-    </fragment>
-
-    <fragment
         android:id="@+id/displayFragment"
         android:name="com.example.homework.DisplayFragment"
-        tools:layout="@layout/fragment_display">
-        <argument
-            android:name="inputText"
-            app:argType="string" />
-    </fragment>
+        tools:layout="@layout/fragment_display" />
 </navigation>
