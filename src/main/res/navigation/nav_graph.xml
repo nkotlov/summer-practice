@@ -11,7 +11,29 @@
     <fragment
         android:id="@+id/searchFragment"
         android:name="com.example.homework.SearchFragment"
-        tools:layout="@layout/fragment_search" />
+        tools:layout="@layout/fragment_search">
+        <action
+            android:id="@+id/action_searchFragment_to_countryDetailFragment"
+            app:destination="@id/countryDetailFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/countryDetailFragment"
+        android:name="com.example.homework.CountryDetailFragment"
+        tools:layout="@layout/fragment_country_detail">
+        <argument
+            android:name="countryId"
+            app:argType="integer" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/countryListFragment"
+        android:name="com.example.homework.CountryListFragment"
+        tools:layout="@layout/fragment_country_list">
+        <action
+            android:id="@+id/action_countryListFragment_to_countryDetailFragment"
+            app:destination="@id/countryDetailFragment"/>
+    </fragment>
 
     <fragment
         android:id="@+id/inputFragment"
@@ -48,4 +70,9 @@
         android:id="@+id/displayFragment"
         android:name="com.example.homework.DisplayFragment"
         tools:layout="@layout/fragment_display" />
+
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.example.homework.NotificationsFragment"
+        tools:layout="@layout/fragment_notifications" />
 </navigation>

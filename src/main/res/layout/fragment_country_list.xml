@@ -3,17 +3,9 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <android.widget.SearchView
-        android:id="@+id/searchView"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        android:queryHint="Search countries" />
-
     <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/searchRecyclerView"
+        android:id="@+id/countryRecyclerView"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_marginTop="60dp"
         android:padding="16dp" />
 </FrameLayout>

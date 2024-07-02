@@ -9,6 +9,10 @@ android {
     namespace = "com.example.homework"
     compileSdk = 34
 
+    viewBinding {
+        val enabled = true
+    }
+
     defaultConfig {
         applicationId = "com.example.homework"
         minSdk = 24
@@ -43,6 +47,8 @@ android {
 }
 
 dependencies {
+    implementation ("com.github.bumptech.glide:glide:4.12.0")
+    annotationProcessor ("com.github.bumptech.glide:compiler:4.12.0")
     implementation("androidx.navigation:navigation-fragment-ktx:2.5.3")
     implementation("androidx.navigation:navigation-ui-ktx:2.5.3")
     implementation ("androidx.navigation:navigation-dynamic-features-fragment:2.5.3")
